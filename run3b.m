@@ -2,7 +2,7 @@
 close all
 clear all
 N=2^6
-x = 0:0.001:2*pi;
+x = linspace(0,2*pi,5000);
 z= mydft(h(x))
 [a0,a,b] =myfouriercoeff(z);
 t = linspace(0,2*pi,5000);
@@ -15,6 +15,14 @@ for k = 1:length(M)
     end
     p(k,:)=y(1,:)
 end
+clear j k
+for k = 1:length(M)
+    for j = 1:M(k)
+        s= s + a(j)*cos(j*x)+b(j)*sin(j*x)
+    end
+    r(k,:)=s(1,:)
+end
+
 
 figure()
 plot(t,h(t),t,p(1,:),t,p(2,:),t,p(3,:))
