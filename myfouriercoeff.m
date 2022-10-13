@@ -9,7 +9,7 @@ N = length(z);% Compute the length of vector z
 c= z(2:N);% remove first element z(1) from z-vector
 a0 = z(1);
 for n = 1:((N/2)-1)
-    a(n)=real(c(n)+c(N-n))
-    b(n)= real(i*(c(n)-c(N-n)))
+    a(n)=real(c(n)+c(N-n));
+    b(n)= real(i*(c(n)-c(N-n)));
 end
 end

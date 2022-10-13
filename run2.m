@@ -9,8 +9,8 @@ end
 z= mydft(y)
 
 a0exact = 2/pi;
-for k = 1:N
-    aexact(k) = (-4/pi)*((-1).^k)/((4*k^2)-1);
+for k = 1:(N/2-1)
+    aexact(2*k) = (-4./pi)*((-1).^k)/((4*k^2)-1);
 end
 [a0,a,b] =myfouriercoeff(z);% cosine coefficients calculated from the DFT z
 figure()
