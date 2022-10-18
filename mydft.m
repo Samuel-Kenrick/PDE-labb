@@ -1,7 +1,7 @@
 function z = mydft(y)
 
 N = length(y);
-omega = exp(2*pi*i/N)
+omega = exp(2*pi*i/N);
 
 for n = 1:N
     z(n) = 0;
